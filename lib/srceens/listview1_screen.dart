@@ -15,27 +15,13 @@ class Listview1Screen extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: ListView(
-        children: const [
-         ListTile(
-          leading: Icon(Icons.access_time_sharp),
-          title: Text('Hola mundo'),
-         ),
-           ListTile(
-          leading: Icon(Icons.access_time_sharp),
-          title: Text('Hola mundo'),
-         ),
+        children: [
+          ...options.map((e) => 
           ListTile(
-          leading: Icon(Icons.access_time_sharp),
-          title: Text('Hola mundo'),
+          trailing: Icon(Icons.arrow_forward_ios_outlined),// LEading icono a la izquierda , trailing icono a la derecha
+          title: Text(e),
          ),
-          ListTile(
-          leading: Icon(Icons.access_time_sharp),
-          title: Text('Hola mundo'),
-         ),
-          ListTile(
-          leading: Icon(Icons.access_time_sharp),
-          title: Text('Hola mundo'),
-         ),
+         ).toList()
         ],
       ) 
     );
