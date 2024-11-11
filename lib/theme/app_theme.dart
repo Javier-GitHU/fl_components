@@ -10,6 +10,9 @@ class AppTheme {
       ),
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
+       ),
+       textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(foregroundColor: primary)
        )
       );
 }
