@@ -6,6 +6,7 @@ class AppTheme {
         // Color primario
          appBarTheme: const AppBarTheme(
          color: primary,
+         titleTextStyle: TextStyle(color: Colors.white, fontSize: 24)
       ),
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
