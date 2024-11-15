@@ -9,8 +9,9 @@ class CustomCardTipo2 extends StatelessWidget {
     return const Card(
       child: Column(
         children: [
-          Image(
-            image: NetworkImage('https://i.pinimg.com/736x/1e/00/45/1e004547ab21e301b49b3dad61283d43.jpg')
+          FadeInImage(
+            image: NetworkImage('https://i.pinimg.com/736x/1e/00/45/1e004547ab21e301b49b3dad61283d43.jpg'), 
+            placeholder: AssetImage('assets/jar-loading.gif'),//Icono de carga
             )
         ],
       ),
