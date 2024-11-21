@@ -2,7 +2,7 @@ import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class CardScreen4 extends StatelessWidget {
-   
+  final options = const ['Zinogre', 'Narcacuga', 'Nergigante', 'Rathalos'];
   const CardScreen4({Key? key}) : super(key: key);
   
   @override
