@@ -17,6 +17,10 @@ class MonsterDetailScreen extends StatelessWidget{
       body: Center(
         child: MonsterhunterCard(imageURL: imageURL, descripcion: descripcion, nombre: nombre),
       ),
+       floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context)
+      ),
     );
   }
 }
