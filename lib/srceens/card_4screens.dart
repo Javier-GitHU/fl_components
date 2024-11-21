@@ -27,13 +27,13 @@ class CardScreen4 extends StatelessWidget {
     },
   ];
 
-  const CardScreen4({Key? key}) : super(key: key);
+  const CardScreen4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Personalized Cards'),  
+        title: const Text('Paginas personalizadas'),  
       ),
       body: ListView.builder(  
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -57,11 +57,9 @@ class CardScreen4 extends StatelessWidget {
                 },
                 child: MonsterhunterCard(  
                   imageURL: monster['urlImagen']!, 
-                  descripcion: monster['description']!, 
                   nombre: monster['nombre']!,  
                 ),
               ),
-              const SizedBox(height: 10),  
             ],
           );
         },

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 class MonsterhunterCard extends StatelessWidget {
   final String nombre;
   final String imageURL;
-  final String descripcion;
-  const MonsterhunterCard ({super.key, required this.imageURL, required this.descripcion, required this.nombre});
+  final String? descripcion;
+  const MonsterhunterCard ({super.key, required this.imageURL, this.descripcion, required this.nombre});
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +28,13 @@ class MonsterhunterCard extends StatelessWidget {
             fit: BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 3000),
             ),
+            if(descripcion != null)
             Container(
               alignment: AlignmentDirectional.bottomCenter,
               padding: const EdgeInsets.only( top: 10, bottom: 10, right: 20),
               child: 
-              Text(descripcion)
-              )
+              Text(descripcion!)
+              ) 
         ],
       ),
     );
