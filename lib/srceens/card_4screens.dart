@@ -2,32 +2,57 @@ import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class CardScreen4 extends StatelessWidget {
-  final options = const ['Zinogre', 'Narcacuga', 'Nergigante', 'Rathalos'];
+  final options = const [
+    {
+      'nombre': 'Zinogre',
+      'urlImagen': 'https://wallpapers.com/images/hd/monster-hunter-world-zinogre-agygxj62lbalh6dz.jpg',
+      'description': 'El Zinogre es un gran wyvern cuadrúpedo de apariencia canina. Posee un cuerpo musculoso con fuertes patas delanteras y un gran torso, su cabeza es pequeña y posee dos duros cuernos rectos. Sus grandes garras delanteras poseen espolones que en realidad son vestigios alares. Su cola es larga y ancha. El Zinogre posee escamas de azul intenso, conchas y cuernos amarillentos y varios mechones de largo pelaje blanco.'
+    },
+    {
+      'nombre': 'Rathalos',
+      'urlImagen': 'https://cdn.staticneo.com/w/monsterhunter/thumb/Rath.JPG/300px-Rath.JPG',
+      'description': 'El Zinogre es un gran wyvern cuadrúpedo de apariencia canina. Posee un cuerpo musculoso con fuertes patas delanteras y un gran torso, su cabeza es pequeña y posee dos duros cuernos rectos. Sus grandes garras delanteras poseen espolones que en realidad son vestigios alares. Su cola es larga y ancha. El Zinogre posee escamas de azul intenso, conchas y cuernos amarillentos y varios mechones de largo pelaje blanco.'
+    },
+    {
+      'nombre': 'Zinogre',
+      'urlImagen': 'https://wallpapers.com/images/hd/monster-hunter-world-zinogre-agygxj62lbalh6dz.jpg',
+      'description': 'El Zinogre es un gran wyvern cuadrúpedo de apariencia canina. Posee un cuerpo musculoso con fuertes patas delanteras y un gran torso, su cabeza es pequeña y posee dos duros cuernos rectos. Sus grandes garras delanteras poseen espolones que en realidad son vestigios alares. Su cola es larga y ancha. El Zinogre posee escamas de azul intenso, conchas y cuernos amarillentos y varios mechones de largo pelaje blanco.'
+    },
+    {
+      'nombre': 'Zinogre',
+      'urlImagen': 'https://wallpapers.com/images/hd/monster-hunter-world-zinogre-agygxj62lbalh6dz.jpg',
+      'description': 'El Zinogre es un gran wyvern cuadrúpedo de apariencia canina. Posee un cuerpo musculoso con fuertes patas delanteras y un gran torso, su cabeza es pequeña y posee dos duros cuernos rectos. Sus grandes garras delanteras poseen espolones que en realidad son vestigios alares. Su cola es larga y ancha. El Zinogre posee escamas de azul intenso, conchas y cuernos amarillentos y varios mechones de largo pelaje blanco.'
+    },
+    ];
   const CardScreen4({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('Card Widget'),
+        title: const Text('Personaliced cards'),
       ),
-      body: ListView(
+      body: ListView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        children: const [
-          CustomCardTipo1(),
-          SizedBox(height: 10,),
-          CustomCardTipo2(imageURL: 'https://i.pinimg.com/736x/1e/00/45/1e004547ab21e301b49b3dad61283d43.jpg', titulo: 'Zinogre el dios del Trueno',),
-          SizedBox(height: 10,),
-          CustomCardTipo2(imageURL: 'https://www.dexerto.es/cdn-image/wp-content/uploads/sites/3/2024/01/03/monster-hunter-world-pc-ps4-xbox-one_318487.jpg', titulo: 'Rathalos el angel rojo',),
-          SizedBox(height: 10,),
-          CustomCardTipo2(imageURL: 'https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/08/monster-hunter-rise-sunbreak-lucent-nargacuga.jpg', titulo: 'Narcaguga el terror de la noche',),
-          SizedBox(height: 10,),
-          CustomCardTipo2(imageURL: 'https://pbs.twimg.com/media/FPeHbosWUAAMxUK.jpg', titulo: 'Anjanath el dinosaurio pelado',),
-          SizedBox(height: 10,),
-          CustomCardTipo2(imageURL: 'https://i.pinimg.com/736x/e7/0c/76/e70c76ce161d6989a1c8f2d98a6a4417.jpg', titulo: 'Nergigante el terror del aire ancestral',),
-        ],
-      )
-    );
+        itemCount: options.length,
+        itemBuilder: (context, index){
+          final monster = options[index];
+          return Column(
+            children: [
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => )
+                  )
+                },
+              )
+            ],
+            )
+        }
+      ),
+    )
   }
 }
 

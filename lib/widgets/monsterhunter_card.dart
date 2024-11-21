@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 class MonsterhunterCard extends StatelessWidget {
+  final String nombre;
   final String imageURL;
   final String descripcion;
-  const MonsterhunterCard ({super.key, required this.imageURL, required this.descripcion});
+  const MonsterhunterCard ({super.key, required this.imageURL, required this.descripcion, required this.nombre});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,12 @@ class MonsterhunterCard extends StatelessWidget {
       ),
       child: Column(
         children: [
+          Container(
+              alignment: AlignmentDirectional.bottomCenter,
+              padding: const EdgeInsets.only( top: 10, bottom: 10, right: 20),
+              child: 
+              Text(nombre)
+              ),
            FadeInImage(
             image: NetworkImage(imageURL), 
             placeholder: const AssetImage('assets/jar-loading.gif'),
