@@ -19,6 +19,15 @@ class AppTheme {
         elevation: 5,
         foregroundColor: Colors.white, //Cambiar el color de icono
         shape: StadiumBorder(),//Redondea el icono
-      )
-      );
+      ),
+      //Elevated button
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: primary,
+          foregroundColor: Colors.white,
+          shape: StadiumBorder(),
+          elevation: 5,
+        ),
+      ),
+    );
 }
