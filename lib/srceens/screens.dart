@@ -5,4 +5,5 @@ export 'package:fl_components/srceens/listview1_screen.dart';
 export 'package:fl_components/srceens/listview2_screen.dart';
 export 'package:fl_components/srceens/card_4screens.dart';
 export 'package:fl_components/srceens/monster_detail_screen.dart';
-
+export 'package:fl_components/srceens/avatar_screen.dart';
+export 'package:fl_components/srceens/animated_screen.dart';

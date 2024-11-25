@@ -35,7 +35,17 @@ class AppRoutes {
       route: 'Cards personalizadas',
       icon: Icons.card_membership,
       name: 'Cards personalizadas',
-      screen: const CardScreen4())
+      screen: const CardScreen4()),
+      MenuOption(
+      route: 'avatar',
+      icon: Icons.person_4_outlined,
+      name: 'Avatar',
+      screen: const AvatarScreen()),
+      MenuOption(
+      route: 'animated',
+      icon: Icons.person_4_outlined,
+      name: 'Animated Container',
+      screen: const AnimatedScreen())
   ];
 
 
