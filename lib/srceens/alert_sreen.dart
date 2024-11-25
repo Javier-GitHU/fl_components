@@ -6,10 +6,12 @@ class AlertSreen extends StatelessWidget {
   
   void displayDialog(BuildContext context){
     showDialog(
+      barrierDismissible: false,//Es para que cuando pulses fuera de la ventana emrgente no se salga
     context: context,
     builder: ( context ) {
-      return const AlertDialog(
+      return  AlertDialog(
         title: Text("Alerta"),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.circular(5)), //Le dara bordes redondeados
         content:
         Column(
           mainAxisSize: MainAxisSize.min,
@@ -19,7 +21,12 @@ class AlertSreen extends StatelessWidget {
             FlutterLogo(size: 100,)
           ],
         ),
-      
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context), 
+            child: Text("Cerrar")
+            )
+        ],
       );
     }
     );
