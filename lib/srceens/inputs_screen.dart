@@ -1,3 +1,4 @@
+import 'package:fl_components/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class InputsScreen extends StatelessWidget {
@@ -10,37 +11,38 @@ class InputsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
       ),
-      body: SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      body: const SingleChildScrollView(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Column(
         children: [
-          TextFormField(
-            autofocus: true, //Al entrar a la pagina el primer elemento del formulario hara que salga el teclado
-            textCapitalization: TextCapitalization.words,//Primera letra de cada palabra la hace mayuscula
-            onChanged: (value){
-              print('value: $value');
-            },
-            validator: (value){
-              if ( value!.length < 3){
-                return 'Minimo 3 caracteres';
-              }
-            },
-            autovalidateMode: AutovalidateMode.onUserInteraction,
-            decoration: InputDecoration(
-              hintText: 'Nombre y apellidos',
-              labelText: 'Nombre',
-              helperText: 'Solo letras',
-              //prefixIcon: Icon(Icons.verified_user_outlined),
-              icon: Icon(Icons.assignment_ind_outlined),
-              suffixIcon: Icon(Icons.person_2_outlined),
-              /*border: OutlineInputBorder(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  topRight: Radius.circular(20)
-                )
-              )
-              */
-            )
+          CustomTextFormField(
+            hintText: 'Nombre',
+            labelText: 'Nombre del usuario',
+            helperText: 'Solo letras',
+            icon: Icons.verified_user_outlined,
+            suffixIcon: Icons.person_2_rounded, 
+            obscureText: false,
+          ),
+          SizedBox(height: 30,),
+          CustomTextFormField(
+            hintText: 'Apellidos',
+            labelText: 'Apellidos del usuario',
+            icon: Icons.person_4_outlined,
+            obscureText: false,
+          ),
+             SizedBox(height: 30,),
+          CustomTextFormField(
+            hintText: 'E-mail',
+            labelText: 'E-Mail del usuario',
+            icon: Icons.email_rounded,
+            obscureText: false,
+            keyboardType: TextInputType.emailAddress,//Sale el arroba en el teclado principal,
+          ),
+          CustomTextFormField(
+            hintText: 'Contraseña',
+            labelText: 'Contraseña del usuario',
+            icon: Icons.password_rounded,
+            obscureText: true,
           ),
         ],
       ),
@@ -48,3 +50,4 @@ class InputsScreen extends StatelessWidget {
     );
   }
 }
+  
