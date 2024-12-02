@@ -8,7 +8,11 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? suffixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
-  const CustomTextFormField({super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText});
+
+  final String formProperty;
+  final Map<String, String> formValues;
+
+  const CustomTextFormField({super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText, required this.formProperty, required this.formValues});
 
 
   @override
@@ -19,7 +23,8 @@ class CustomTextFormField extends StatelessWidget {
           keyboardType: keyboardType,
           obscureText: obscureText,
           onChanged: (value){
-            print('value: $value');
+          formValues[formProperty] = value;
+          print('Valores de formValues: ${formValues.toString()}');
           },
           validator: (value){
             if ( value!.length < 3){

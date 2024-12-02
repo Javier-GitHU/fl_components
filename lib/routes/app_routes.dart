@@ -50,7 +50,12 @@ class AppRoutes {
       route: 'inputs', 
       icon: Icons.power_input_rounded, 
       name: 'Forms: Inputs', 
-      screen: const InputsScreen())
+      screen: const InputsScreen()),
+      MenuOption(
+      route: 'slider', 
+      icon: Icons.check_box, 
+      name: 'Slider', 
+      screen: const SliderScreen())
 
   ];
 

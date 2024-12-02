@@ -44,6 +44,10 @@ class AppTheme {
           borderSide: const BorderSide(color:primary),
           borderRadius: BorderRadius.circular(10)
         )
-        )
+      ),
+      sliderTheme: SliderThemeData(
+        activeTrackColor: primary,
+        thumbColor: primary
+      )
     );
 }
